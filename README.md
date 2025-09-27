@@ -47,6 +47,27 @@ A modern job posting website built with Next.js, Prisma, and PostgreSQL.
    npm run dev
    ```
 
+## Environment Variables
+
+Create a `.env` file in the root directory. Example variables:
+
+```
+# PostgreSQL connection string
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+
+# NextAuth.js secret (generate with `openssl rand -base64 32`)
+NEXTAUTH_SECRET=your-secret-here
+
+# NextAuth.js URL (e.g., http://localhost:3000 for local dev)
+NEXTAUTH_URL=http://localhost:3000
+
+# (Optional) Email provider for passwordless login
+# EMAIL_SERVER=smtp://user:pass@smtp.example.com:587
+# EMAIL_FROM=your@email.com
+```
+
+Update these values according to your environment and authentication providers.
+
 ## Project Structure
 
 - `app/` - Next.js app directory (pages, layouts, API routes)
